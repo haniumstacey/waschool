@@ -1,0 +1,83 @@
+<?if(!isset($_SESSION))
+{
+	session_start();
+}
+?>
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Insert title here</title>
+</head>
+<title>WaSchool ::: Free board</title>
+<style>
+	
+	
+	form 
+	{
+			font-family: "Helvetica", sans-serif; 
+	}
+	input 
+	{
+		margin-bottom: 0.5em;
+	}
+	input[type="submit"] 
+	{
+		font-weight: bold;
+		
+	}
+	label.heading
+	{
+		float: left;
+		margin-right: 1em;
+		text-align: right;
+		width: 7em; }
+	legend 
+	{
+		background-color: white;
+		border: 1px solid black;
+		padding: 0.25em; 
+	}
+</style>
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+			<form name="form1">
+			<p><img src ="noname01.png" width="54" height="54" border="0" >
+				<img src="waschool.png" width="209" height="108" border="0" alt="waschool.png">
+				
+			</p>
+		</form>
+	<?
+	if(isset($_SESSION['flash']))
+	{
+	?>
+	 <div id="flash"><?=$_SESSION['flash']?></div> 
+	<?
+	unset($_SESSION['flash']);
+}?>
+	<form method="POST" action='haniumlogin.php'>
+		<!--  <fieldset>  -->
+			
+			<label class=heading for=id>아이디:</label>
+			<input type=text name=id id="id"/> <br>
+			<label class=heading for=passwd>패스워드:</label>
+			<input type=password name=passwd id="passwd"/> <br>
+	
+	
+
+		&nbsp;&nbsp;&nbsp;&nbsp;	
+		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type=submit value="로그인" style="width:100px;height=30px" /> 
+            <!--  </fieldset> 
+ -->
+	</form>
+	<input type=submit value="회원가입" style="width:100px;height=30px"onclick="location.href='haniumadmin.php'" /> 
+	<form name="form2">
+								<p><img src="hone.png" width="48" height="46" border="0" alt="hone.png"> <img src="messasge.png" width="51" height="46"
+				border="0" alt="messasge.png"> <img src="mypage.png" width="49" height="50" border="0" alt="mypage.png"> <img src="mileage.png"
+				width="50" height="50" border="0" alt="mileage.png"> <img
+				src="gift.png" width="49" height="50" border="0" alt="gift.png">
+			</p>
+		</form>
+</body>
+</html>

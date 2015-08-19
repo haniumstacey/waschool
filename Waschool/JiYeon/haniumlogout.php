@@ -1,0 +1,9 @@
+<?if(!isset($_SESSION))
+{
+	session_start();
+}
+session_destroy();
+session_regenerate_id(true);
+session_start();
+header("Location:haniumlogin.html");
+?>

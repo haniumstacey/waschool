@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">  
+ <style type="text/css">
+  #title1{
+   margin-top : 2%;
+  }
+  .menu{
+   text-align : center;
+  }
+  .contents{
+   background-color : lightblue;
+   padding : 20px;
+  }
+  a:active{ color : black; }
+  a:visited{ color : black; }
+  a:hover{
+   color : red;
+   background-color : lightgray;
+  }
+  a:link{ color : black; }
+  a{ border : 0px; }
+ </style>
+</head>
+<body>
+ <div style="text-align:center">
+  <form method="POST" id="frm" action="">
+   <h1 id="title1">test Board</h1>
+   <hr>
+  </form>
+ </div>
+<div class="container"> 
+<div class="row-fluid">
+<div class="span2 menu">
+    <ul class="nav nav-tabs nav-stacked">
+     <li><a href="test12.asp">메뉴1</a></li>
+     <li><a href="javascript_:;" onclick="alert('미구현입니다')">메뉴2</a></li>
+     <li><a href="javascript_:;" onclick="alert('미구현입니다')">메뉴3</a></li>
+     <li><a href="javascript_:;" onclick="alert('미구현입니다')">메뉴4</a></li>
+    </ul>
+   </div>
+   <div class="span10 contents">                    
+    메뉴1화면 입니다.
+   </div>
+  </div>
+ </div>
+<script src="http://code.jquery.com/jquery.js"></script>   
+<script src="js/bootstrap.min.js"></script>  
+</body>
+</html>
