@@ -1,0 +1,117 @@
+﻿<?if(!isset($_SESSION))
+{
+	@session_start();
+}
+?>
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<title>Insert title here</title>
+	<!-- �빀爾먯�怨� 理쒖냼�솕�맂 理쒖떊 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<!-- 遺�媛��쟻�씤 �뀒留� -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		
+		<!-- jQuery (遺��듃�뒪�듃�옪�쓽 �옄諛붿뒪�겕由쏀듃 �뵆�윭洹몄씤�쓣 �쐞�빐 �븘�슂�빀�땲�떎) -->
+	    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+	    <script src='js/jquery.min.js'></script>
+		<!-- �빀爾먯�怨� 理쒖냼�솕�맂 理쒖떊 �옄諛붿뒪�겕由쏀듃 -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<title>WaSchool ::: Free board</title>
+<style>
+	
+	
+	form 
+	{
+			font-family: "Helvetica", sans-serif; 
+	}
+	input 
+	{
+		margin-bottom: 0.5em;
+	}
+	input[type="submit"] 
+	{
+		font-weight: bold;
+		
+	}
+	label.heading
+	{
+		float: left;
+		margin-right: 1em;
+		text-align: right;
+		width: 7em; }
+	legend 
+	{
+		background-color: white;
+		border: 1px solid black;
+		padding: 0.25em; 
+	}
+</style>
+<center>
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+			<form name="form1">
+			<p><a href="#" onClick="window.location.reload();"><img src ="noname01.png"  width="54" height="54" border="0"></a> 
+				<img src="waschool.png" width="209" height="108" border="0" alt="waschool.png">
+				
+			</p>
+		</form>
+	<?
+	if(isset($_SESSION['flash']))
+	{
+	?>
+	 <div id="flash"><?=$_SESSION['flash']?></div> 
+	<?
+	unset($_SESSION['flash']);
+}?>
+<div class="page-header">
+  <h1>로그인</h1>
+  </div>
+	<form method="POST" action='haniumlogin.php'>
+		<!--  <fieldset>  -->
+			<label class=heading for=id>아이디:</label>
+
+					
+					<input type="text" name="id" id = "id"  placeholder="아이디" class="form-control" required>
+					
+					<label class=heading for=id>비밀번호:</label>
+					<input type="password" name="passwd" id = "passwd"  placeholder="비밀번호" class="form-control" required>
+				
+					 <!-- <td colspan="2"> --><input type="submit" value="로그인" class="btn btn-primary btn-block btn-lg">
+					
+			
+
+		<!-- 	<label class=heading for=id>아이디:</label>
+			<input type="text" name="id" id = "id"  placeholder="아이디" class="form-control" required/><br>
+			<input type=text name=id id="id"/> <br>
+			<label class=heading for=passwd>패스워드:</label>
+			<input type=password name=passwd id="passwd"/> <br>
+	 -->
+	
+
+		&nbsp;&nbsp;&nbsp;&nbsp;	
+		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<!-- <input type=submit value="로그인" style="width:100px;height=30px" />  -->
+            <!--  </fieldset> 
+ -->
+	</form>
+	<!-- <input type=submit value="회원가입" style="width:100px;height=30px"onclick="location.href='haniumadmin.php'" />  -->
+	<input type="submit" value="회원가입" class="btn btn-primary btn-block btn-lg" onclick = "location.href='haniumadmin.php'">
+	<form name="form2">
+								<p><a href="FirstPage.php"><!-- <img src="hone.png" width="48" height="46" border="0" alt="hone.png"> --><img src="hone.png" border="0" alt="hone.png"></a> <a href="message/haniumMessageForm_1.php"><!-- <img src="messasge.png" width="51" height="46"
+				border="0" alt="messasge.png"> --><img src="messasge.png" 
+				border="0" alt="messasge.png"></a> <a href="mypage_base.php"><!-- <img src="mypage.png" width="49" height="50" border="0" alt="mypage.png"> --><img src="mypage.png" border="0" alt="mypage.png"></a> <a href="haniummileage.php"><!-- <img src="mileage.png"
+				width="50" height="50" border="0" alt="mileage.png"> --><img src="mileage.png"
+				 border="0" alt="mileage.png"></a><a href="gift_base.php"> <!-- <img
+				src="gift.png" width="49" height="50" border="0" alt="gift.png"> --><img
+				src="gift.png" border="0" alt="gift.png"></a>
+			</p>
+		</form>
+</body>
+</center>
+</html>
